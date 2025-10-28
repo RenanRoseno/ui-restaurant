@@ -1,1 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
+.pad-left{
+    padding-left: 1vh
+}
+
+:host ::ng-deep .p-toolbar {
+  width: 100%;
+  border-radius: 0;
+}

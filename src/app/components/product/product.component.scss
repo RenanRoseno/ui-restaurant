@@ -1,0 +1,38 @@
+::ng-deep .custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Roboto, sans-serif;
+}
+
+/* Cabeçalho */
+::ng-deep .custom-table thead th {
+  background-color: #f8f8f8;
+  color: #333;
+  font-weight: 600;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 2px solid #ddd;
+}
+
+/* Linhas do corpo */
+::ng-deep .custom-table tbody tr {
+  transition: background-color 0.3s ease;
+}
+
+/* Linhas alternadas (stripped) */
+::ng-deep .custom-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Hover */
+::ng-deep .custom-table tbody tr:hover {
+  background-color: #eee;
+  cursor: pointer;
+}
+
+/* Células */
+::ng-deep .custom-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #eee;
+  color: #333;
+}
