@@ -1,8 +1,14 @@
-.pad-left{
-    padding-left: 1vh
+@import "tailwindcss";
+
+.pad-left {
+  padding-left: 1vh
 }
 
 :host ::ng-deep .p-toolbar {
   width: 100%;
   border-radius: 0;
+}
+
+body {
+  background-color: #fcfbfa;
 }
