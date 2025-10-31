@@ -23,7 +23,7 @@
     </ng-template>
   </p-table>
   <div class="card flex justify-center" id="dialog-modal">
-    <p-dialog [header]="!!selectedProduct() ? 'Editar produto' : 'Cadastrar produto'" [(visible)]="visible" position="top" [style]="{ width: '17rem' }">
+    <p-dialog (onHide)="onDialogClose()" [header]="!!selectedProduct() ? 'Editar produto' : 'Cadastrar produto'" [(visible)]="visible" position="top" [style]="{ width: '17rem' }" >
       <app-product-form (changeVisibility)="changeVisibility($event)" [selectedProduct]="selectedProduct"></app-product-form>
     </p-dialog>
   </div>

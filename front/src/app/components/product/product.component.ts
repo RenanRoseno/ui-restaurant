@@ -127,4 +127,9 @@ export class ProductComponent {
         confirmButtonColor: "#30d638ff"
       });
     }
+
+    onDialogClose(): void {
+      this.selectedProduct.set(null);
+      console.log('Dialog closed, selectedProduct reset to null');
+    }
 }

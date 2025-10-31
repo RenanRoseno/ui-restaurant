@@ -36,12 +36,16 @@ export class ProductFormComponent {
       if (product) {
         this.form.patchValue({
           name: product.name,
-          price: product.price
-        });
-        console.log('Produto atualizado no form:', product);
-      }
-    });
-  }
+            price: product.price
+          });
+          console.log('Produto atualizado no form:', product);
+        } else {
+          this.form.reset();
+          this.form.get('price')?.setValue(0);
+          console.log('Formulário resetado');
+        }
+      });
+    }
 
   ngOnInit() {
     console.log('Produto selecionado no form:', this.selectedProduct());
