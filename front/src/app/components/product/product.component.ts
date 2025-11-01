@@ -110,7 +110,7 @@ export class ProductComponent {
         popup: 'my-swal-popup'
       },
       didOpen: (popup) => {
-        popup.style.zIndex = '100000'; // maior que qualquer overlay do PrimeNG
+        popup.style.zIndex = '100000';
       }
     });
   }
