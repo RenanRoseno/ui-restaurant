@@ -36,30 +36,21 @@ export class ProductFormComponent {
       if (product) {
         this.form.patchValue({
           name: product.name,
-            price: product.price
-          });
-          console.log('Produto atualizado no form:', product);
-        } else {
-          this.form.reset();
-          this.form.get('price')?.setValue(0);
-          console.log('Formulário resetado');
-        }
-      });
-    }
-
-  ngOnInit() {
-    console.log('Produto selecionado no form:', this.selectedProduct());
+          price: product.price
+        });
+      } else {
+        this.form.reset();
+        this.form.get('price')?.setValue(0);
+      }
+    });
   }
+
+  ngOnInit() { }
 
 
 
   save(): void {
-    //this.saveEvent.emit({ name: this.name, price: this.price } as Product);
-
-
     if (this.form.valid) {
-      console.log('Produto enviado:', this.form.value);
-
       const executation = !!this.selectedProduct() ? this.productService.update(this.selectedProduct()!.id, this.form.value) :
         this.productService.save(this.form.value);
 
@@ -72,7 +63,6 @@ export class ProductFormComponent {
         error: (error) => this.showErrorMessage(error.message)
       });
     } else {
-      console.log('Formulário inválido');
       this.form.markAllAsTouched();
     }
   }

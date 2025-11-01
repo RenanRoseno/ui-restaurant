@@ -57,14 +57,12 @@ export class ProductComponent {
   }
 
   edit(product: Product) {
-    console.log('Produto para editar:', product);
     this.visible = true;
     this.selectedProduct.set(product);
   }
 
 
   deleteProduct(product: Product) {
-    console.log('Produto para deletar:', product);
     this.productService.delete(product.id).subscribe({
       next: (data) => {
         this.showSucessMessage();
@@ -117,17 +115,16 @@ export class ProductComponent {
     });
   }
 
-    showSucessMessage(): void {
-      Swal.fire({
-        title: "Sucesso!",
-        text: "Produto deletado com sucesso.",
-        icon: "success",
-        confirmButtonColor: "#30d638ff"
-      });
-    }
+  showSucessMessage(): void {
+    Swal.fire({
+      title: "Sucesso!",
+      text: "Produto deletado com sucesso.",
+      icon: "success",
+      confirmButtonColor: "#30d638ff"
+    });
+  }
 
-    onDialogClose(): void {
-      this.selectedProduct.set(null);
-      console.log('Dialog closed, selectedProduct reset to null');
-    }
+  onDialogClose(): void {
+    this.selectedProduct.set(null);
+  }
 }
