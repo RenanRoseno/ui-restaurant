@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
 import { TableService } from '../../services/table.service';
-import { JsonPipe } from '@angular/common';
 
 @Component({
   selector: 'app-table',
-  imports: [JsonPipe],
+  imports: [],
   templateUrl: './table.component.html',
   styleUrls: ['./table.component.css'],
 })

@@ -1,15 +1,12 @@
 import { Component, signal } from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
-import { ProductComponent } from './components/product/product.component';
-import { TableComponent } from './components/table/table.component';
-import { OrderComponent } from './components/order/order.component';
 import { MegaMenuItem } from 'primeng/api';
 import { MegaMenu } from 'primeng/megamenu';
 import { CommonModule } from '@angular/common';
 
 @Component({
     selector: 'app-root',
-    imports: [RouterOutlet, ProductComponent, TableComponent, OrderComponent, MegaMenu, CommonModule],
+    imports: [RouterOutlet, MegaMenu, CommonModule],
     templateUrl: './app.html',
     styleUrl: './app.css'
 })

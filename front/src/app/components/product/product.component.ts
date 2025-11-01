@@ -7,16 +7,14 @@ import { Dialog } from 'primeng/dialog';
 import { InputTextModule } from 'primeng/inputtext';
 import { ProductFormComponent } from './form/product-form.component/product-form.component';
 import Swal from 'sweetalert2'
-import { sign } from 'crypto';
 import { Product } from '../../models/product';
 import { ConfirmationService, MessageService } from 'primeng/api';
 import { ConfirmDialog } from 'primeng/confirmdialog';
 import { ToastModule } from 'primeng/toast';
-import { error } from 'console';
 
 @Component({
   selector: 'app-product',
-  imports: [JsonPipe, TableModule, CommonModule, ButtonModule, Dialog, InputTextModule, ProductFormComponent, ConfirmDialog, ToastModule],
+  imports: [TableModule, CommonModule, ButtonModule, Dialog, InputTextModule, ProductFormComponent, ConfirmDialog, ToastModule],
   providers: [ConfirmationService, MessageService],
   templateUrl: './product.component.html',
   styleUrl: './product.component.scss',
